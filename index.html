@@ -17,20 +17,22 @@
 }
 
 .active, .accordion:hover {
-  background-color: #ccc; 
+  background-color: #ccc;
 }
 
 .panel {
   padding: 0 18px;
-  display: none;
   background-color: white;
+  max-height: 0;
   overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
 </style>
 </head>
 <body>
 
-<h2>Accordion</h2>
+<h2>Animated Accordion</h2>
+<p>Click on the buttons to open the collapsible content.</p>
 
 <button class="accordion">Section 1</button>
 <div class="panel">
@@ -55,11 +57,11 @@ for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
     } else {
-      panel.style.display = "block";
-    }
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
   });
 }
 </script>
