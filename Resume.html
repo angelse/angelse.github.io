@@ -98,7 +98,162 @@ body {
 <div class="panel">
 	<ul>
 		<li>Designed, developed, and launched multiple online e-commerce stores; filled over 300 orders, generating over $20,000 in revenue in the first quarter of operations. </li>
+		<li>Communicated wit<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover{
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- navigation menu -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="Resume.html">Resume</a>
+  <a href="Projects.html">Projects</a>
+  <a href="Contact.html">Contact</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+
+<!-- job information with accordian menu and bullets -->
+<h3>Job Experiences</h3>
+
+<button class="accordion">KAMI CARD STANDS – Owner/Chief Executive Officer</button>
+<div class="panel">
+	<ul>
+		<li>Designed, developed, and launched multiple online e-commerce stores; filled over 300 orders, generating over $20,000 in revenue in the first quarter of operations. </li>
 		<li>Communicated with Chinese manufacturers and fulfillment centers in Mandarin Chinese to facilitate acquisition, consolidation, and shipment of products at the most efficient market rates. </li>
+		<li>Sourced and handled shipping/receiving for new products, after projecting profitability. </li>
+		<li>Used Google Sheets to track and chart changes. </li>
+	</ul>
+</div>
+
+<button class="accordion">GRIN INC. – Technical Support Engineer</button>
+<div class="panel">
+	<ul>
+		<li>Proposed and implemented a new workflow for the technical support team to take over
+finance-related tier 1 tickets previously addressed by the billing team. This change improved
+overall customer success department efficiency and improved the billing team’s capacity.</li>
+		<li>Resolved client issues quickly and efficiently, with an average first response below 15 minutes,
+and a customer feedback rating of over 95%.</li>
+		<li>Triaged app-breaking bugs through JIRA and ZenDesk with related screenshots and the steps to recreate.</li>
+		<li>Created documentation articles on common issues and supplemented articles with recorded follow-along
+tutorials.</li>
+	</ul>
+</div>
+
+<button class="accordion">CA Dept. of State Hospitals - Information Technology Associate</button>
+<div class="panel">
+	<ul>
+		<li>Resolved service desk requests from state hospital staff through email and phone calls, with up to 10-15 tickets per day.</li>
+		<li>Managed equipment retirement process according to California state requirements, resulting in retiring over 500
+defunct equipment from facility.</li>
+		<li>Diagnosed, repaired, and deployed dozens of Windows laptops, desktops, and mobile phones to office workers
+monthly.</li>
+		<li>Advised on internal projects and processes by assisting with research and writing technical articles for staff.</li>
+	</ul>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "100%";
+}
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+</body>
+</html>
+h Chinese manufacturers and fulfillment centers in Mandarin Chinese to facilitate acquisition, consolidation, and shipment of products at the most efficient market rates. </li>
 		<li>Sourced and handled shipping/receiving for new products, after projecting profitability. </li>
 		<li>Used Google Sheets to track and chart changes. </li>
 	</ul>

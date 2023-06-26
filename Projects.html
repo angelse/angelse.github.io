@@ -4,12 +4,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 
-<!-- body style-->
 body {
   font-family: "Lato", sans-serif;
 }
 
-<!-- accordian style-->
 .accordion {
   background-color: #eee;
   color: #444;
@@ -35,7 +33,6 @@ body {
   transition: max-height 0.2s ease-out;
 }
 
-<!-- navigation menu style-->
 .sidenav {
   height: 100%;
   width: 0;
@@ -62,7 +59,6 @@ body {
   color: #f1f1f1;
 }
 
-<!-- menu close button -->
 .sidenav .closebtn {
   position: absolute;
   top: 0;
@@ -71,7 +67,6 @@ body {
   margin-left: 50px;
 }
 
-<!-- screen adaptation -->
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -80,6 +75,7 @@ body {
 </head>
 
 <body>
+
 <!-- navigation menu -->
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -88,12 +84,13 @@ body {
   <a href="Projects.html">Projects</a>
   <a href="Contact.html">Contact</a>
 </div>
+
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
 
-<!-- page -->
 
 <!-- job information with accordian menu and bullets -->
 <h3>Job Experiences</h3>
+
 <button class="accordion">KAMI CARD STANDS – Owner/Chief Executive Officer</button>
 <div class="panel">
 	<ul>
@@ -103,6 +100,7 @@ body {
 		<li>Used Google Sheets to track and chart changes. </li>
 	</ul>
 </div>
+
 <button class="accordion">GRIN INC. – Technical Support Engineer</button>
 <div class="panel">
 	<ul>
@@ -116,6 +114,7 @@ and a customer feedback rating of over 95%.</li>
 tutorials.</li>
 	</ul>
 </div>
+
 <button class="accordion">CA Dept. of State Hospitals - Information Technology Associate</button>
 <div class="panel">
 	<ul>
@@ -126,8 +125,8 @@ defunct equipment from facility.</li>
 monthly.</li>
 		<li>Advised on internal projects and processes by assisting with research and writing technical articles for staff.</li>
 	</ul>
-
 </div>
+
 <script>
 var acc = document.getElementsByClassName("accordion");
 var i;
