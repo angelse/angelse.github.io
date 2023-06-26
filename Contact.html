@@ -3,9 +3,13 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+
+<!-- body style-->
 body {
   font-family: "Lato", sans-serif;
 }
+
+<!-- accordian style-->
 .accordion {
   background-color: #eee;
   color: #444;
@@ -31,7 +35,7 @@ body {
   transition: max-height 0.2s ease-out;
 }
 
-/* The side navigation menu */
+<!-- navigation menu style-->
 .sidenav {
   height: 100%;
   width: 0;
@@ -46,7 +50,6 @@ body {
   text-align:center;
 }
 
-/* The navigation menu links */
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -59,7 +62,7 @@ body {
   color: #f1f1f1;
 }
 
-/* Position and style the close button (top right corner) */
+<!-- menu close button -->
 .sidenav .closebtn {
   position: absolute;
   top: 0;
@@ -68,6 +71,7 @@ body {
   margin-left: 50px;
 }
 
+<!-- screen adaptation -->
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -76,19 +80,21 @@ body {
 </head>
 
 <body>
-<!-- side menu -->
+<!-- navigation menu -->
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">Resume</a>
-  <a href="#">Projects</a>
-  <a href="#">Contact</a>
+  <a href="/html/index.asp">Home</a>
+  <a href="Resume.html">Resume</a>
+  <a href="Projects.html">Projects</a>
+  <a href="Contact.html">Contact</a>
 </div>
-
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
 
-<!-- page content -->
+<!-- page -->
 <div>
-<h3>Contact</h3>
+
+<!-- job information with accordian menu and bullets -->
+<h3>Job Experiences</h3>
 <button class="accordion">KAMI CARD STANDS – Owner/Chief Executive Officer</button>
 <div class="panel">
 	<ul>
