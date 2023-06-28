@@ -6,13 +6,38 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+   
+  width: 100%;
+}
 
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+ 
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
 body {
     font-family: "Lato", sans-serif;
+	overflow: scroll;
 }
 
 .cen {
 	text-align: center;
+}
+
+.round1 {
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 5px;
+	text-align: center;
+	width: 200px;
+	margin: auto;
 }
 
 .ban {
@@ -110,6 +135,13 @@ body {
     display: block;
     text-align: left;
   }
+  
+  @media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .panel {
+    max-width: 350px;
+  }
+ 
 } 
 </style>
 </head>
@@ -125,6 +157,7 @@ Welcome to my website! GitHub repository can be found
 			  <span class="glyphicon glyphicon-chevron-left"></span>
 </p>
 </div>
+
 
 <!-- navigation menu -->
  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
@@ -146,10 +179,46 @@ Welcome to my website! GitHub repository can be found
 <div> 
 	
 	<!-- Executive Summary -->
+	<div>
 	<h3 class="cen">Executive Summary</h3>
-	<p class="cen"><i> Here is my executive summary.Here is my executive summary.Here is my executive summary.Here is my executive summary. </i></p>
-
+	<p class="cen"><i>
+	With over <b>6 years of client-facing support roles</b> under my belt, I'm well equipped to handle any client conversation with grace and ease. 
+	I've have my <b>Bachelor's in Computer Engineering</b>, and have the foundations in software and hardware engineering. 
+	I am using the tools and flexibility I've gained and I'm very excited about <b>starting my journey in web development.</b>
+	</i></p>
+	</div>
+	
+	<!-- Education -->
+	<div>
+	<h3 class="cen">Education</h3>
+	<button class="accordion" class="btn btn-default btn-sm">
+	<span class="glyphicon glyphicon-education"></span> B.S. in Computer Engineering – CSU Sacramento
+	</button>
+	<div class="panel">
+	<p>
+		<b>Program Description:</b>
+		<br>
+		The Bachelor of Science degree in Computer Engineering is a four-year program that emphasizes engineering design of computer hardware and systems at all levels. Engineering design begins with logic design taught to entering students during their first semester. The thread of design continues through the study of architecture, CMOS and VLSI technology, ASIC design, operating systems, computer hardware design, and networking hardware. To complete their degree, students take a two-semester senior design and project course.
+		<br>
+		<br>
+		<i>
+			Units required for Major: 97
+			<br>
+			Total units required for the BS: 124
+		</i>
+		<br>
+	</p>
+	<p class="round1">
+		<a href="https://catalog.csus.edu/colleges/engineering-computer-science/engineering-computer-engineering/">
+		<span class="glyphicon glyphicon-globe"></span> Link to CSUS CpE website
+		</a>
+	</p>
+	<br>
+	</div>
+	</div>
+	
 	<!-- Resume -->
+	<div>
 	<h3 class="cen">Work Experience</h3>
 
 	<button class="accordion">
@@ -162,6 +231,7 @@ Welcome to my website! GitHub repository can be found
 			<li>Sourced and handled shipping/receiving for new products, after projecting profitability. </li>
 			<li>Used Google Sheets to track and chart changes. </li>
 		</ul>
+		<br>
 	</div>
 
 	<button class="accordion">
@@ -178,10 +248,12 @@ Welcome to my website! GitHub repository can be found
 			<li>Created documentation articles on common issues and supplemented articles with recorded follow-along
 	tutorials.</li>
 		</ul>
+		<br>
 	</div>
 
 	<button class="accordion">
-	<span class="glyphicon glyphicon-briefcase"></span> CA Dept. of State Hospitals - Information Technology Associate
+	<span class="glyphicon glyphicon-briefcase"></span> 
+	CA Dept. of State Hospitals – Information Technology Associate
 	</button>
 	<div class="panel">
 		<ul>
@@ -192,36 +264,114 @@ Welcome to my website! GitHub repository can be found
 	monthly.</li>
 			<li>Advised on internal projects and processes by assisting with research and writing technical articles for staff.</li>
 		</ul>
+		<br>
+	</div>
 	</div>
 	
+	<!-- Programming Languages -->
+	<div>
 	
-	<!-- Education -->
-	<h3 class="cen">Education</h3>
-	<button class="accordion" class="btn btn-default btn-sm">
-	<span class="glyphicon glyphicon-education"></span> B.S. in Computer Engineering, CSU Sacramento
+	<h3 class="cen">Technical Skills</h3>
+	
+	<button class="accordion">
+	Web Development and Relevant Skills
+	</button>
+	<div class="panel">
+	<h4></h4>
+	<p>
+		<ul>
+		<li> HTML
+		<li> CSS
+		<li> Javascript
+		</ul>
+	</p>
+	</div>
+	
+	<button class="accordion">
+	Software Development and Relevant Skills
+	</button>
+	<div class="panel">
+	
+	<table>
+	<tr>
+		<td>Technology</td>
+		<td>Years of Experience</td>
+	</tr>
+	<tr>
+		<td>Java</td>
+		<td>4 years</td>
+	</tr>
+	</table>
+	</div>
+	
+	<button class="accordion">
+	Hardware Development and Relevant Skills
 	</button>
 	<div class="panel">
 	<p>
-		<b>Program Description:</b>
-		<br>
-		The Bachelor of Science degree in Computer Engineering is a four-year program that emphasizes engineering design of computer hardware and systems at all levels. Engineering design begins with logic design taught to entering students during their first semester. The thread of design continues through the study of architecture, CMOS and VLSI technology, ASIC design, operating systems, computer hardware design, and networking hardware. To complete their degree, students take a two-semester senior design and project course.
-		<br>
-		<br>
-		<i>
-			Units required for Major: 97
-			<br>
-			Total units required for the BS: 124
-		</i>
-		<br>
-		<br>
+		<ul>
+		<li> VHDL
+		<li> Verilog
+		<li> Assembly x86
+		</ul>
 	</p>
-	<p class="cen">
-			<a href="https://catalog.csus.edu/colleges/engineering-computer-science/engineering-computer-engineering/">
-			  <span class="glyphicon glyphicon-globe"></span> Link to CSUS CpE website
-			</a>
-		  </p>
 	</div>
-</div>
+	
+	<button class="accordion">
+	Troubleshooting and General Software
+	</button>
+	<div class="panel">
+	<p>
+		<ul>
+		<li> Google Sheets
+		<li> Google Calendar
+		<li> Zoom
+		<li> JIRA
+		<li> Confluence
+		<li> ZenDesk
+		</ul>
+	</p>
+	</div>
+	</div>
+	
+	<!-- Languages -->
+	<div>
+	<h3 class="cen">Spoken Languages</h3>
+	
+	<button class="accordion">
+	<span class="glyphicon glyphicon-text-background"></span> 
+	English – Native
+	</button>
+	<div class="panel">
+	<p>English is my native language. I have completed college senior-level writing courses with passing grades on various subject matters and genres.</p>
+	<br>
+	</div>
+	
+	<button class="accordion">
+	<b>日本語</b> Japanese – JLPT1 Equivalent
+	</button>
+	<div class="panel">
+	<p>I've studied Japanese in High School and College classes for a total of 4 years, but I'm always looking for ways to practice and learn more!
+	<br>
+	<br>
+	初めまして！私の名前はエンジェールです。四年間日本語を勉強しました。もしもっと私と話すしたい、すぐに連絡ください。日本語を話す事が好きですから～</p>
+	<br>
+	</div>
+	
+	<button class="accordion">
+	<b>简中文</b> Mandarin Chinese – Beginner
+	</button>
+	<div class="panel">
+	<p>I've taken 15 units of college-level Mandarin Chinese classes, and still learn a little bit more in my spare time. 
+	<br>
+	<br>
+	大家好！我的名字叫彥哲。 我学了中文二年中，但是如果我不明白什么字，就用Google Translate。;)
+	</p>
+	<br>
+	</div>
+	</div>
+	
+</div> <!--end of body <-->
 
 <script>
 var acc = document.getElementsByClassName("accordion");
