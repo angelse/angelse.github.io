@@ -6,6 +6,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <style>
+
+.exec{
+background-color: #FFEFD3;
+padding: 8px;
+}
+
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -41,22 +47,17 @@ body {
 }
 
 .ban {
-	position: -webkit-sticky;
-	position: sticky;
-	top: 0;
-	width: 100%;
-	background-color: #eee;
-	color: #444;
-	border: none;
+	background-color: #474350;
+	color: #f2f2f2;
 	text-align: center;
-	height: 30px;
+	height: 100px;
 	margin: auto;
-	padding: 5px;
+	padding: 10px 10px 10px 10px;
 }
 
  /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #333;
+  background-color: #474350;
   overflow: hidden;
 }
 
@@ -85,7 +86,7 @@ body {
   display: none;
 } 
 .accordion {
-    background-color: #eee;
+    background-color: #D0D5DD;
     color: #444;
     cursor: pointer;
     padding: 18px;
@@ -148,24 +149,13 @@ body {
 
 <body>
 
-<!-- top banner for announcements -->
-<div id="mybanner" class="ban">
-<p>
-Welcome to my website! GitHub repository can be found 
-			  <span class="glyphicon glyphicon-chevron-right"></span> 
-			  <a href="https://github.com/angelse/angelse.github.io"><u><b>here</b></u></a>
-			  <span class="glyphicon glyphicon-chevron-left"></span>
-</p>
-</div>
-
-
-<!-- navigation menu -->
+<!-- top navigation menu -->
  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="topnav" id="myTopnav">
   <a href="index.html" class="active">Home</a>
-  <a href="Resume.html">Resume</a>
+  <a href="Resume.html">CV</a>
   <a href="Projects.html">Projects</a>
   <a href="Contact.html">Contact</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -179,7 +169,7 @@ Welcome to my website! GitHub repository can be found
 <div> 
 	
 	<!-- Executive Summary -->
-	<div>
+	<div class="exec">
 	<h3 class="cen">Executive Summary</h3>
 	<p class="cen"><i>
 	With over <b>6 years of client-facing support roles</b> under my belt, I'm well equipped to handle any client conversation with grace and ease. 
@@ -374,6 +364,16 @@ Welcome to my website! GitHub repository can be found
 	</p>
 	<br>
 	</div>
+	</div>
+	
+	<!-- bottom banner -->
+	<div class="ban">
+	<p>
+	GitHub repository can be found 
+			  <a href="https://github.com/angelse/angelse.github.io"><u><b>here</b></u></a>
+	Code written by Angelica Smith-Evans
+	(c) 2023
+	</p>
 	</div>
 	
 </div> <!--end of body <-->

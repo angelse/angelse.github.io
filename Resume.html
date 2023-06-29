@@ -7,28 +7,57 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <style>
 
+.exec{
+background-color: #FFEFD3;
+padding: 8px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+   
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+ 
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
 body {
     font-family: "Lato", sans-serif;
+	overflow: scroll;
 }
 
 .cen {
 	text-align: center;
 }
 
-.ban {
-	width: 100%;
-	background-color: #eee;
-	color: #444;
-	border: none;
-	text-align: left;
-	height: 30px;
+.round1 {
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 5px;
+	text-align: center;
+	width: 200px;
 	margin: auto;
-	padding: 6px 4px 4px 4px;
+}
+
+.ban {
+	background-color: #474350;
+	color: #f2f2f2;
+	text-align: center;
+	height: 100px;
+	margin: auto;
+	padding: 5px;
 }
 
  /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #333;
+  background-color: #474350;
   overflow: hidden;
 }
 
@@ -40,18 +69,15 @@ body {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+	text-decoration: underline;
 }
 
 /* Add an active class to highlight the current page */
 .topnav a.active {
-  background-color: #04AA6D;
   color: white;
 }
 
@@ -60,7 +86,7 @@ body {
   display: none;
 } 
 .accordion {
-    background-color: #eee;
+    background-color: #B8C0CC;
     color: #444;
     cursor: pointer;
     padding: 18px;
@@ -110,29 +136,26 @@ body {
     display: block;
     text-align: left;
   }
+  
+  @media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .panel {
+    max-width: 350px;
+  }
+ 
 } 
 </style>
 </head>
 
 <body>
 
-<!-- top banner for announcements -->
-<div id="mybanner" class="ban">
-<p>
-Welcome to my website! GitHub repository can be found 
-			  <span class="glyphicon glyphicon-chevron-right"></span> 
-			  <a href="https://github.com/angelse/angelse.github.io"><u><b>here</b></u></a>
-			  <span class="glyphicon glyphicon-chevron-left"></span>
-</p>
-</div>
-
-<!-- navigation menu -->
+<!-- top navigation menu -->
  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="topnav" id="myTopnav">
-  <a href="index.html" class="active">Home</a>
-  <a href="Resume.html">Resume</a>
+  <a href="index.html">Home</a>
+  <a href="Resume.html" class="active">CV</a>
   <a href="Projects.html">Projects</a>
   <a href="Contact.html">Contact</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -143,78 +166,31 @@ Welcome to my website! GitHub repository can be found
 
 
 <!-- main body -->
-<div id="mainbody" class="mainsection"> 
+<div> 
 
-	<h3 class="cen">Work Experience</h3>
-
-	<button class="accordion">
-		<span class="glyphicon glyphicon-briefcase"></span> KAMI CARD STANDS – Owner/Chief Executive Officer
-	</button>
-	<div class="panel">
-		<ul>
-			<li>Designed, developed, and launched multiple online e-commerce stores; filled over 300 orders, generating over $20,000 in revenue in the first quarter of operations. </li>
-			<li>Communicated with Chinese manufacturers and fulfillment centers in Mandarin Chinese to facilitate acquisition, consolidation, and shipment of products at the most efficient market rates. </li>
-			<li>Sourced and handled shipping/receiving for new products, after projecting profitability. </li>
-			<li>Used Google Sheets to track and chart changes. </li>
-		</ul>
+	<!-- Executive Summary -->
+	<div class="exec">
+	<h3 class="cen">CV</h3>
+	<p class="cen"> Please take a look at my CV, and if you'd like to keep a copy, then please give it a download!</p>
 	</div>
+	
+	<!-- CV display -->
+	<object data="data/test.pdf" type="application/pdf" width="100%" height="1400px">
+	alt : <a href="data/test.pdf">test.pdf</a>
+<	/object>
 
-	<button class="accordion">
-	<span class="glyphicon glyphicon-briefcase"></span> GRIN INC. – Technical Support Engineer
-	</button>
-	<div class="panel">
-		<ul>
-			<li>Proposed and implemented a new workflow for the technical support team to take over
-	finance-related tier 1 tickets previously addressed by the billing team. This change improved
-	overall customer success department efficiency and improved the billing team’s capacity.</li>
-			<li>Resolved client issues quickly and efficiently, with an average first response below 15 minutes,
-	and a customer feedback rating of over 95%.</li>
-			<li>Triaged app-breaking bugs through JIRA and ZenDesk with related screenshots and the steps to recreate.</li>
-			<li>Created documentation articles on common issues and supplemented articles with recorded follow-along
-	tutorials.</li>
-		</ul>
-	</div>
-
-	<button class="accordion">
-	<span class="glyphicon glyphicon-briefcase"></span> CA Dept. of State Hospitals - Information Technology Associate
-	</button>
-	<div class="panel">
-		<ul>
-			<li>Resolved service desk requests from state hospital staff through email and phone calls, with up to 10-15 tickets per day.</li>
-			<li>Managed equipment retirement process according to California state requirements, resulting in retiring over 500
-	defunct equipment from facility.</li>
-			<li>Diagnosed, repaired, and deployed dozens of Windows laptops, desktops, and mobile phones to office workers
-	monthly.</li>
-			<li>Advised on internal projects and processes by assisting with research and writing technical articles for staff.</li>
-		</ul>
-	</div>
-	<h3 class="cen">Education</h3>
-
-	<button class="accordion" class="btn btn-default btn-sm">
-	<span class="glyphicon glyphicon-education"></span> B.S. in Computer Engineering, CSU Sacramento
-	</button>
-	<div class="panel">
+	
+	<!-- bottom banner -->
+	<div class="ban">
 	<p>
-		<b>Program Description:</b>
-		<br>
-		The Bachelor of Science degree in Computer Engineering is a four-year program that emphasizes engineering design of computer hardware and systems at all levels. Engineering design begins with logic design taught to entering students during their first semester. The thread of design continues through the study of architecture, CMOS and VLSI technology, ASIC design, operating systems, computer hardware design, and networking hardware. To complete their degree, students take a two-semester senior design and project course.
-		<br>
-		<br>
-		<i>
-			Units required for Major: 97
-			<br>
-			Total units required for the BS: 124
-		</i>
-		<br>
-		<br>
+	GitHub repository can be found 
+			  <a href="https://github.com/angelse/angelse.github.io"><u><b>here</b></u></a>
+	Code written by Angelica Smith-Evans
+	(c) 2023
 	</p>
-	<p class="cen">
-			<a href="https://catalog.csus.edu/colleges/engineering-computer-science/engineering-computer-engineering/">
-			  <span class="glyphicon glyphicon-globe"></span> Link to CSUS CpE website
-			</a>
-		  </p>
 	</div>
-</div>
+	
+</div> <!--end of body <-->
 
 <script>
 var acc = document.getElementsByClassName("accordion");
