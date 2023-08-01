@@ -12,22 +12,6 @@ background-color: #FFEFD3;
 padding: 8px;
 }
 
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-   
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
- 
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
 body {
     font-family: "Lato", sans-serif;
 	overflow: scroll;
@@ -37,6 +21,9 @@ body {
 	text-align: center;
 }
 
+.mainbody {
+	padding: 5px;
+}
 .round1 {
 	border: 2px solid black;
 	border-radius: 5px;
@@ -172,14 +159,21 @@ body {
 	<div class="exec">
 	<h3 class="cen">Projects</h3>
 	<p class="cen">
-	Here are a few projects I've been blessed to be a part of.
+	On this page, you'll find a few small coding projects I've worked on.
 	</p>
 	</div>
 	
-	<div>
-	<p class = "cen">
-	Under construction! Please check in later once I've added more info!
-	</p>
+	<div class="mainbody">
+	<h2 class="cen"> Guessing Game </h2>
+	<p class="cen"><b> Here is small game I've created! It is a simple guessing game utilizing JavaScript. Try to see how fast you can guess the number!</b></p>
+	
+	<div class="cen">
+	<p><i>Guess a number between 1 and 100:</i></p>
+	<input type="number" id="guess">
+	<button onclick="checkGuess()">Submit Guess</button>
+	<p id="message"></p>
+	</div>
+	
 	</div>
 	
 	<!-- bottom banner -->
@@ -224,6 +218,28 @@ function myFunction() {
     x.className = "topnav";
   }
 } 
+
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
+    let attempts = 0;
+
+    function checkGuess() {
+      const guess = parseInt(document.getElementById('guess').value);
+
+      if (isNaN(guess) || guess < 1 || guess > 100) {
+        document.getElementById('message').textContent = 'Please enter a valid number between 1 and 100.';
+        return;
+      }
+
+      attempts++;
+
+      if (guess === randomNumber) {
+        document.getElementById('message').textContent = `You did it! The number was ${randomNumber}!! You got it in ${attempts} attempts.`;
+      } else if (guess < randomNumber) {
+        document.getElementById('message').textContent = 'Nice try but... The number is higher.';
+      } else {
+        document.getElementById('message').textContent = 'Nice try but... The number is lower.';
+      }
+    }
 </script>
 
 </body>
