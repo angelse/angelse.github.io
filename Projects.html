@@ -97,6 +97,21 @@ body {
     transition: max-height 0.2s ease-out;
 }
 
+ .card {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      border: 1px solid #000;
+      text-align: center;
+      font-size: 36px;
+      line-height: 60px;
+      cursor: pointer;
+      margin: 5px;
+    }
+    .flipped, .matched {
+      background-color: #e0e0e0;
+    }
+
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
@@ -174,6 +189,16 @@ body {
 	<p id="message"></p>
 	</div>
 	
+	<div class="mainbody">
+	<h2 class="cen"> Memory Match Game </h2>
+	<p class="cen"><b> This one is a more complex matching game utilizing JavaScript. Test your memory skills!</b></p>
+	
+	<div class="cen">
+	<p><i>Click on the cards to find matching pairs.</i></p>
+	<div id="gameBoard"></div>
+	<button onclick="resetGame()">New Game</button>
+	</div>
+	
 	</div>
 	
 	<!-- bottom banner -->
@@ -240,6 +265,72 @@ function myFunction() {
         document.getElementById('message').textContent = 'Nice try but... The number is lower.';
       }
     }
+	
+	    const images = ['🐶', '🐱', '🐭', '🐹', '🐰', '🦊', '🐻', '🐼'];
+    const gridSize = 4; // 4x4 grid
+    let flippedCards = [];
+    let matchesFound = 0;
+
+    function createGameBoard() {
+      const gameBoard = document.getElementById('gameBoard');
+      gameBoard.innerHTML = '';
+      flippedCards = [];
+      matchesFound = 0;
+
+      // Shuffle the images array
+      const shuffledImages = [...images, ...images].sort(() => Math.random() - 0.5);
+
+      for (let i = 0; i < gridSize * gridSize; i++) {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.dataset.image = shuffledImages[i];
+        card.onclick = () => flipCard(card);
+        gameBoard.appendChild(card);
+      }
+    }
+
+    function flipCard(card) {
+      // If the card is already flipped or the array is full, return
+      if (flippedCards.length === 2 || card.classList.contains('flipped')) {
+        return;
+      }
+
+      card.textContent = card.dataset.image;
+      card.classList.add('flipped');
+      flippedCards.push(card);
+
+      if (flippedCards.length === 2) {
+        setTimeout(checkMatch, 1000);
+      }
+    }
+
+    function checkMatch() {
+      const [card1, card2] = flippedCards;
+
+      if (card1.dataset.image === card2.dataset.image) {
+        card1.classList.add('matched');
+        card2.classList.add('matched');
+        matchesFound++;
+
+        if (matchesFound === gridSize * gridSize / 2) {
+          alert('Congratulations! You found all the matching pairs.');
+        }
+      } else {
+        card1.textContent = '';
+        card2.textContent = '';
+        card1.classList.remove('flipped');
+        card2.classList.remove('flipped');
+      }
+
+      flippedCards = [];
+    }
+
+    function resetGame() {
+      createGameBoard();
+    }
+
+    createGameBoard();
+	
 </script>
 
 </body>
